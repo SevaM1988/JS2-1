@@ -6,15 +6,17 @@
     <script src="script.js"></script>
     <script>
         window.onload = function () {
-            var menu = new Menu('menu', 'menu', [
-                new MenuItem('/', 'Home'),
-                new MenuItem('/news', 'News'),
-                new SubMenu('submenu', 'sebmenu', [
-                    new SubMenuItem('/news/latest', 'Latest'),
-                    new SubMenuItem('/news/most_popular', 'Most Popular')
-                ]),
-                new MenuItem('/blog', 'Blog')
-            ]);
+            var items = [
+                new MenuItem('/index.html', 'HOME'),
+                new MenuItem('/product.html', 'MAN'),
+                new MenuItem('/', 'WOMEN'),
+                new MenuItem('/', 'KIDS'),
+                new MenuItem('/', 'ACCOSERIESE'),
+                new MenuItem('/', 'FEATURED'),
+                new MenuItem('/', 'HOT DEALS')
+            ];
+
+            var menu = new SubMenu('menu', 'menu', items);
 
             document.body.appendChild(menu.render());
         }
