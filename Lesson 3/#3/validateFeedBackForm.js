@@ -33,15 +33,15 @@ class Form {
 
 document.getElementById('btnSubmit').onclick = function() {
 	let feedBackName = document.getElementById('feedback__name');
-	let templateName = /^[A-Za-zА-Яа-я]+/;
+	let templateName = /^[А-я]+/;
 	let errorName = document.getElementById('feedback__errorName');
 	
 	let feedBackPhone = document.getElementById('feedback__phone');
-	let templatePhone = /^\+\d\(\d{3}\)\d{3}\-\d{4}$/;
+	let templatePhone = /^\+\d\(\d{3}\)\d{3}-\d{2}-\d{2}$/;
 	let errorPhone = document.getElementById('feedback__errorPhone');
 	
 	let feedBackEmail = document.getElementById('feedback__email');
-	let templateEmail = /^[a-z]+(\.|\-)?[a-z]+\@[a-z]+\.[a-z]{2,4}$/;
+	let templateEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 	let errorEmail = document.getElementById('feedback__errorEmail');
 	
 	let validateName = new Form(feedBackName, templateName, errorName);
