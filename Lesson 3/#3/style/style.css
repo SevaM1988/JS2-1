@@ -67,6 +67,10 @@ button:focus {
 	outline: none;
 }
 
+.feedback__cities {
+
+}
+
 #btnSubmit {
 	width: 274px;
 	height: 45px;

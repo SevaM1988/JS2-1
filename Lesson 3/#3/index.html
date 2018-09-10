@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style/style.css">
+	<script src="script/jquery-3.2.1.min.js"></script>
 	<title>Form</title>
 </head>
 
@@ -24,12 +25,16 @@
 				<label for="feedback__text">
 					<textarea id="feedback__text" class="feedback__field" maxlength="136" placeholder="Ваше сообщение"></textarea>
 				</label>
+				<label for="feedback__cities">
+					<select name="feedback__cities" class="feedback__cities feedback__field"></select>
+				</label>
 				<button id="btnSubmit">Отправить</button>
 				<div id="feedback__success">Данные успешно отправлены.</div>
 			</form>
 		</div>
 	</div>
-	<script src="validateFeedBackForm.js"></script>
+	<script src="script/validateFeedBackForm.js"></script>
+	<script src="script/selectCities.js"></script>
 </body>
 
 </html>
