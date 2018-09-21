@@ -25,8 +25,11 @@
 				<label for="feedback__text">
 					<textarea id="feedback__text" class="feedback__field" maxlength="136" placeholder="Ваше сообщение"></textarea>
 				</label>
+				<label for="feedback__birthday"></label>
+				<input type="text" id="feedback__birthday" class="feedback__field" placeholder="DD/MM/YYYY">
+				<div id="feedback__errorBirthday" class="feedback__error">Введите дату своего рождения пример: "05/07/1988"</div>
 				<label for="feedback__cities">
-					<select name="feedback__cities" class="feedback__cities feedback__field"></select>
+					<select name="feedback__cities" class="feedback__cities feedback__field" id="feedback__cities"></select>
 				</label>
 				<button id="btnSubmit">Отправить</button>
 				<div id="feedback__success">Данные успешно отправлены.</div>

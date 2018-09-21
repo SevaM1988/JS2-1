@@ -43,14 +43,20 @@ document.getElementById('btnSubmit').onclick = function() {
 	let feedBackEmail = document.getElementById('feedback__email');
 	let templateEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 	let errorEmail = document.getElementById('feedback__errorEmail');
-	
+
+    let feedBackBirthday = document.getElementById('feedback__birthday');
+    let templateBirthday = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+    let errorBirthday = document.getElementById('feedback__errorBirthday');
+
 	let validateName = new Form(feedBackName, templateName, errorName);
 	let validatePhone = new Form(feedBackPhone, templatePhone, errorPhone);
 	let validateEmail = new Form(feedBackEmail, templateEmail, errorEmail);
+    let validateBirthday = new Form(feedBackBirthday, templateBirthday, errorBirthday);
 	
 	validateName.validateForm();
 	validatePhone.validateForm();
 	validateEmail.validateForm();
+    validateBirthday.validateForm();
 	
 	validateEmail.showResult();
 };
